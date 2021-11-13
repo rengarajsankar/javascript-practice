@@ -1,0 +1,158 @@
+<h1>Loop</h1>
+for (let i=1; i<=5; i++) {
+    alert('Hello, The current index/num is: ' + i);
+    document.write('<li>Hello, The current index/num is: ' + i + '</li>');
+    console.log('Hello, The current index/num is: ' + i);
+  }
+
+  // for loop - reverse order
+
+for (let i = 5; i >= 1; i--) 
+
+// for loop - to find out odd even number
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 == 0) {
+    console.log('The current index/num is EVEN : ' + i);
+  } /* else {
+    console.log('The current index/num is ODD : ' + i);
+  } */
+
+  //While loop
+  let i = 1;
+
+while (i <= 5) {
+  alert('Hello, The current index/num is: ' + i);
+  document.write('<li>Hello, The current index/num is: ' + i + '</li>');
+  console.log('Hello, The current index/num is: ' + i);
+  i++;
+}
+
+// do...while loop
+
+/*do {
+    // Code to be executed
+}
+while(condition);*/
+
+let i = 1;
+
+do {
+  alert('Hello, The current index/num is: ' + i);
+  document.write('<li>Hello, The current index/num is: ' + i + '</li>');
+  console.log('Hello, The current index/num is: ' + i);
+  i++;
+}
+while (i <= 5); 
+
+
+// for...in loop
+
+/*for(variable/key in array/object) {
+    // Code to be executed
+}*/
+
+// An array with some elements
+let arrColors = ["Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "Black"];
+
+// Loop through all the elements in the array 
+for (let color in arrColors) {
+  alert('Color is: ' + arrColors[color]);
+  document.write('<li>Color is: ' + arrColors[color] + '</li>');
+  console.log('Color is: ' + arrColors[color]);
+}
+
+// for...of loop
+
+/*for(element in array/string) {
+  // Code to be executed
+} */
+
+// Iterating over an array
+let arrDays = ["Monday", "TuesDay", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+for (let day of arrDays) {
+  console.log(day);
+  document.write('<li>' + day + '</li>');
+}
+
+// Iterating over string
+let name = 'JavaScript';
+for (let letter of name) {
+  document.write(letter + ',');
+  console.log(letter + ',');
+}
+
+// break continue statement
+
+/* break */
+let arrDays = ["Monday", "TuesDay", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+let i = 1;
+while (i <= 10) {
+  if (i == 5) {
+    break;
+  }
+  console.log(i);
+  i++
+}
+
+console.log('// ------------------------------');
+
+for (let i = 0; i <= arrDays.length; i++) {
+  if (i == 3) {
+    break;
+  }
+  console.log(arrDays[i]);
+}
+
+console.log('// ------------------------------');
+
+/* continue */
+i = 1;
+while (i <= 20) {
+  if (i % 2 == 0) {
+    // console.log('Even Number ', i);
+    i++;
+    continue; // skip rest of the loop body
+
+    i + 100; // non of use 
+    console.log('just in even num continue'); // non of use 
+  }
+  console.log('Odd Number ', i);
+  i++;
+}
+
+console.log('// ------------------------------');
+
+for (i = 1; i <= 10; i++) {
+  if (i === 5) {
+    continue; // skip rest of the loop body
+    console.log('just after 5 continue...'); // non of use 
+  }
+  console.log(i);
+}
+
+console.log('// ------------------------------');
+
+for(let int = 0; int < 10; int++) {
+
+  if(int === 2) {
+    console.log('2 is favorite EVEN number');
+    continue;
+  }
+
+  if(int === 5) {
+    console.log('at 5 stop the loop');
+    break;
+  }
+
+  console.log('current Number is:', int); 
+}
+
+//for eachloop
+let arrDays = ["Monday", "TuesDay", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+arrDays.forEach(function(day)){
+  console.log(day);
+}
